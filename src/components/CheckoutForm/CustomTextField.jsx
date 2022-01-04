@@ -9,13 +9,15 @@ function FormInput({ name, label, required }) {
   return (
     <Grid item xs={12} sm={6}>
       <Controller
-        as={TextField}
+        render={({ field }) => (
+        <TextField 
         name={name}
         control={control}
         label={label}
         fullWidth
         required={required}
         error={isError}
+        />)}
       />
     </Grid>
   );
