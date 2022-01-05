@@ -1,17 +1,20 @@
 import { makeStyles, alpha } from '@material-ui/core/styles';
 
+
 const drawerWidth = 0;
 
 export default makeStyles((theme) => ({
   appBar: {
+    opacity: .95,
     boxShadow: 'none',
-    borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
+    borderBottom: '3px solid rgba(245, 5, 5, 0.22)',
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
     },
   },
   title: {
+    fontSize: '24px',
     flexGrow: 1,
     alignItems: 'center',
     display: 'flex',

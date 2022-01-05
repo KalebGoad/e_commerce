@@ -12,6 +12,7 @@ export default makeStyles(() => ({
     justifyContent: 'space-between',
   },
   buttons: {
+    borderRadius: '40px',
     display: 'flex',
     alignItems: 'center',
   },

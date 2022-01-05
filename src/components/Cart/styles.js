@@ -6,6 +6,7 @@ export default makeStyles((theme) => ({
     marginTop: '5%',
   },
   emptyButton: {
+    borderRadius: '20px',
     minWidth: '150px',
     [theme.breakpoints.down('xs')]: {
       marginBottom: '5px',
@@ -15,6 +16,7 @@ export default makeStyles((theme) => ({
     },
   },
   checkoutButton: {
+    borderRadius: '20px',
     minWidth: '150px',
   },
   link: {

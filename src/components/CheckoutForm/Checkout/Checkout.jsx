@@ -67,21 +67,22 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
         <br />
         <Button component={Link} variant="outlined" type="button" to="/">Back to home</Button>
     </>
-  ) :  (
+  ) : (
     <div className={classes.spinner}>
       <CircularProgress />
     </div>
   ));
 
-  if (error) {
-    Confirmation = () => (
-      <>
-        <Typography variant="h5">Error: {error}</Typography>
-        <br />
-        <Button component={Link} variant="outlined" type="button" to="/">Back to home</Button>
-      </>
-    );
-  }
+//   if (error) {
+//     console.log("test");
+//     Confirmation = () => (
+//       <>
+//         <Typography variant="h5">Error: {error}</Typography>
+//         <br />
+//         <Button component={Link} variant="outlined" type="button" to="/">Back to home</Button>
+//       </>
+//     );
+//   }
 
   const Form = () => (activeStep === 0
     ? <AddressForm checkoutToken={checkoutToken} nextStep={nextStep} setShippingData={setShippingData} test={test} />

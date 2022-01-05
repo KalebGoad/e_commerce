@@ -34,10 +34,12 @@ export default makeStyles((theme) => ({
     padding: theme.spacing(3, 0, 5),
   },
   buttons: {
+    borderRadius: '20px',
     display: 'flex',
     justifyContent: 'flex-end',
   },
   button: {
+    borderRadius: '20px',
     marginTop: theme.spacing(3),
     marginLeft: theme.spacing(1),
   },
