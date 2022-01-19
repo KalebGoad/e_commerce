@@ -41,7 +41,7 @@ const Category = ({onCategoryChange}) => {
             cursor: 'pointer',
             textShadow: "0px 0px 8px rgb(255,0,0, 0.5)",
           }}
-          onClick={handleCategoryChange("Hands")}
+          onClick={() => {handleCategoryChange("Hands") }}
       >Hands 
      </motion.li>
      <li style={Cat}>|</li>
@@ -51,7 +51,7 @@ const Category = ({onCategoryChange}) => {
             cursor: 'pointer',
             textShadow: "0px 0px 8px rgb(0,0,255, 0.5)",
           }}
-          onClick={handleCategoryChange("Legs")}
+          onClick={() => {handleCategoryChange("Legs") }}
         >Legs
       </motion.li>
      <li style={Cat}>|</li>
@@ -61,7 +61,7 @@ const Category = ({onCategoryChange}) => {
             cursor: 'pointer',
             textShadow: "0px 0px 8px rgb(0,255,0, 0.5)",
           }}
-          onClick={handleCategoryChange("Misc")}
+          onClick={() => {handleCategoryChange("Misc") }}
         >Misc
       </motion.li>
       <li style={Cat}>|</li>
@@ -69,9 +69,9 @@ const Category = ({onCategoryChange}) => {
           whileHover={{
             scale: 1.2,
             cursor: 'pointer',
-            textShadow: "0px 0px 8px rgb(0,255,0, 0.5)",
+            textShadow: "0px 0px 8px rgb(149, 0, 255, 0.5)",
           }}
-          onClick={handleCategoryChange("All")}
+          onClick={() => {handleCategoryChange("All") }}
         >All
       </motion.li>
    </ul>

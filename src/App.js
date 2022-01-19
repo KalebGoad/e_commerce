@@ -75,7 +75,7 @@ const App = () => {
   const handleCategoryChange = async (cat) => {
       setCategory(cat) 
       console.log(cat);
-  }
+  };
 
   return (
     <Router>

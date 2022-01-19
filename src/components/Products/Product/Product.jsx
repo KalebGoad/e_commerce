@@ -9,9 +9,10 @@ const Product = ({ product, onAddToCart }) => {
   const parseDescription = (desc) => {
    
     let fields = desc.split(',')
-
-    let result = fields[0].substring(desc.search('{Description:')+13, desc.indexOf('}'));
-
+    console.log(fields);
+    let result = fields[0].substring(
+      fields[0].search('{Description:')+13, fields[0].indexOf('}'));
+    console.log(result);
     return result;
   
   }
