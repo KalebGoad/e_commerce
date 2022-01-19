@@ -15,11 +15,13 @@ Made utilizing the following technologies:
 
 
 How to run this app:
- Clone this repo to your machine
- Open your favorite text editor and a terminal
- Run the following commands: 
- $cd src  //Navigate into the src folder of the repo
- $npm start //Runs the app in http://localhost:3000
+* Clone this repo to your machine
+* Open your favorite text editor and a terminal
+* Run the following commands: 
+* $ cd e_commerce 
+* $ npm install 
+* $ cd src  
+* $ npm start //Runs the app in http://localhost:3000
 ### Developer Notes
 
 Working on this project helped me grow as a junior developer. Utilizing the various libraries for styling and commerce.js for storing data proved a great experience driven project for growth. (I'm constantly making style changes as I learn better approaches).
