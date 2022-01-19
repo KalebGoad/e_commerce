@@ -25,7 +25,12 @@ const Hidden = {
 }
 
 
-const Category = () => {
+
+const Category = ({onCategoryChange}) => {
+  const handleCategoryChange = (cat) => {
+    onCategoryChange(cat)
+
+  }
 
   return (
    <ul style={Container}>
@@ -36,6 +41,7 @@ const Category = () => {
             cursor: 'pointer',
             textShadow: "0px 0px 8px rgb(255,0,0, 0.5)",
           }}
+          onClick={handleCategoryChange("Hands")}
       >Hands 
      </motion.li>
      <li style={Cat}>|</li>
@@ -45,6 +51,7 @@ const Category = () => {
             cursor: 'pointer',
             textShadow: "0px 0px 8px rgb(0,0,255, 0.5)",
           }}
+          onClick={handleCategoryChange("Legs")}
         >Legs
       </motion.li>
      <li style={Cat}>|</li>
@@ -54,7 +61,18 @@ const Category = () => {
             cursor: 'pointer',
             textShadow: "0px 0px 8px rgb(0,255,0, 0.5)",
           }}
+          onClick={handleCategoryChange("Misc")}
         >Misc
+      </motion.li>
+      <li style={Cat}>|</li>
+      <motion.li style={Cat}
+          whileHover={{
+            scale: 1.2,
+            cursor: 'pointer',
+            textShadow: "0px 0px 8px rgb(0,255,0, 0.5)",
+          }}
+          onClick={handleCategoryChange("All")}
+        >All
       </motion.li>
    </ul>
   );

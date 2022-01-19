@@ -6,6 +6,15 @@ import useStyles from './styles';
 
 const Product = ({ product, onAddToCart }) => {
   const classes = useStyles();
+  const parseDescription = (desc) => {
+   
+    let fields = desc.split(',')
+
+    let result = fields[0].substring(desc.search('{Description:')+13, desc.indexOf('}'));
+
+    return result;
+  
+  }
 
   const handleAddToCart = () => onAddToCart(product.id, 1);
 
@@ -21,7 +30,7 @@ const Product = ({ product, onAddToCart }) => {
             ${product.price.formatted}
           </Typography>
         </div>
-        <Typography dangerouslySetInnerHTML={{ __html: product.description }} variant="body2" color="textSecondary" component="p" />
+        <Typography dangerouslySetInnerHTML={{ __html: parseDescription(product.description) }} variant="body2" color="textSecondary" component="p" />
       </CardContent>
       <CardActions disableSpacing className={classes.cardActions}>
         <IconButton aria-label="Add to Cart" onClick={handleAddToCart}>

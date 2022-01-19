@@ -11,11 +11,12 @@ const App = () => {
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
   const [errorMessage, setErrorMessage] = useState('');
-
+  const [category, setCategory] = useState({});
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
 
     setProducts(data);
+    // console.log(data);
   };
 
   const fetchCart = async () => {
@@ -71,13 +72,18 @@ const App = () => {
 
   const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
 
+  const handleCategoryChange = async (cat) => {
+      setCategory(cat) 
+      console.log(cat);
+  }
+
   return (
     <Router>
       <div style={{ display: 'flex' }}>
         <CssBaseline />
-        <Navbar totalItems={cart.total_items} handleDrawerToggle={handleDrawerToggle} />
+        <Navbar totalItems={cart.total_items} handleDrawerToggle={handleDrawerToggle} onCategoryChange={handleCategoryChange} />
         <Routes>
-          <Route exact path="/" element={<Products products={products} onAddToCart={handleAddToCart} handleUpdateCartQty />} />
+          <Route exact path="/" element={<Products products={products} category={category}onAddToCart={handleAddToCart} handleUpdateCartQty />} />
           <Route exact path="/cart" element={<Cart cart={cart} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} onEmptyCart={handleEmptyCart} />} />
           
           <Route exact path="/checkout" element={<Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage} />} />
