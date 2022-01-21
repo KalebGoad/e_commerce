@@ -134,11 +134,11 @@ const Category = ({onCategoryChange}) => {
          {/* Below ul list is the responsive dropdown list for screens below md breakpoint */}
         <ul className={classes.Responsive}>
             
-        <li className={classes.Icon}>
+        {/* <li className={classes.Icon}>
           <img 
             src={menu} alt="Menu"
             
-            /></li>
+            /></li> */}
         <motion.li className={classes.Cat}
         
               initial={{
