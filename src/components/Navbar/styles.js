@@ -11,6 +11,7 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
+      
     },
   },
   title: {
@@ -19,9 +20,15 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
     display: 'flex',
     textDecoration: 'none',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '18px',
+    },
   },
+  
+
   image: {
     marginRight: '10px',
+    
   },
   menuButton: {
     marginRight: theme.spacing(2),
